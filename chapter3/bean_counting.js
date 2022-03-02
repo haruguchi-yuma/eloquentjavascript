@@ -5,8 +5,18 @@ const countBs = str => {
   }
   return count
 }
+console.log(countBs("BBBaaBB"))
+
+// for ofでループ
+const countBs2 = str => {
+  let count = 0
+  for(s of str) {
+    str[i] === "B" ? count++ : count
+  }
+}
 
 console.log(countBs("BBBaaBB"))
+
 
 const countChar = (str, target) => {
   let count = 0
