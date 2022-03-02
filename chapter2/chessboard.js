@@ -8,7 +8,7 @@ const chessboard = (size = 8) => {
         line += '#'
       }
     }
-    if (i !== size) line += "\n" 
+    if (i !== size) line += "\n"
   }
   console.log(line)
 }
