@@ -12,3 +12,8 @@ const every = (array, test) => {
 console.log(every([4, 2, 0], n => n % 2 === 0))
 
 // someを使ったバージョン
+{
+  const every = (array, test) => {
+    return !array.some(n => test(n))
+  }
+}
