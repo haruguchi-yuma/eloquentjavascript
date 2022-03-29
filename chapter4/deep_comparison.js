@@ -16,8 +16,10 @@ let obj = {a: {b: 1}, c: 2}
 const deepEqual = (obj1, obj2) => {
   if (Object.keys(obj1).length !== Object.keys(obj2).length) return false
   if (Object.values(obj1).some(n => typeof(n) === 'object' && n !== null)) {
-    const key = Object.keys(obj1).filter((key => typeof(obj1[key]) === 'object'))
-    return deepEqual(obj1[key], obj2[key])
+    const keys = Object.keys(obj1).filter((key => typeof(obj1[key]) === 'object'))
+    for (key of keys) {
+      return deepEqual(obj1[key], obj2[key])
+    }
   }
   else {
     return Object.keys(obj1).every((k, i) => k === Object.keys(obj2)[i])
