@@ -1,27 +1,25 @@
 class Group
-  attr_reader :numbers
+  attr_reader :values
 
   def initialize
-    @numbers = []
+    @values = []
   end
 
-  def add(number)
-    numbers << number if !has(number)
+  def add(value)
+    values << value if !has(value)
   end
 
-  def delete(number)
-    numbers.delete_if { _1 == number}
+  def delete(value)
+    values.delete_if { _1 == value}
   end
 
-  def has(number)
-    numbers.include?(number)
+  def has(value)
+    values.include?(value)
   end
 
-  def self.from(ary)
+  def self.from(element)
     group = new
-    Range.new(*ary).each do |num|
-      group.add(num)
-    end
+    element.each { group.add(_1) }
     group
   end
 end

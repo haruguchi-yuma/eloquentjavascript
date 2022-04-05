@@ -1,29 +1,30 @@
 class Group {
   constructor() {
-    this.numbers = []
+    this.values = []
   }
 
-  add(number) {
-    if (!this.has(number)) {
-      return this.numbers.push(number)
+  add(value) {
+    if (!this.has(value)) {
+      return this.values.push(value)
     }
   }
 
-  delete(number) {
-    let index = this.numbers.indexOf(number)
+  delete(value) {
+    let index = this.values.indexOf(value)
     if (index !== -1) {
-      return this.numbers.splice(index, 1)
+      return this.values.splice(index, 1)
     }
   }
 
-  has(number) {
-    return this.numbers.includes(number)
+  has(value) {
+    return this.values.includes(value)
   }
 
-  static from([start, end]) {
+  static from(element) {
     const group = new Group
-    const arr = [...new Array(end - start +1).keys()].map(n => n + start)
-    arr.forEach(n => group.add(n))
+    for (ele of element) {
+      group.add(ele)
+    }
     return group
   }
 }
