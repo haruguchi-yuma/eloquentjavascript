@@ -1,4 +1,4 @@
-for(let i: string = '#'; i.length <= 7; i += '#') {
+for (let i: string = '#'; i.length <= 7; i += '#') {
   console.log(i);
 }
 
@@ -6,7 +6,7 @@ for(let i: string = '#'; i.length <= 7; i += '#') {
 // 任意の回数繰り返す
 
 const loopingTriangle = (times: number): void => {
-  for(let i: string = '#'; i.length <= times; i += '#') {
+  for (let i: string = '#'; i.length <= times; i += '#') {
     console.log(i);
   }
 }
