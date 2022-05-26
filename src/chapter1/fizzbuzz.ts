@@ -1,4 +1,4 @@
-const fizzbuzz = (n: number): void => {
+const fizzbuzz = (n: number) => {
   [...new Array(n).keys()].map((n) => n + 1).forEach((n) => {
     if (n % 15 === 0) console.log('FizzBuzz')
     else if (n % 3 === 0) console.log('Fizz')
@@ -10,7 +10,7 @@ const fizzbuzz = (n: number): void => {
 fizzbuzz(100)
 
 { //別解
-  const fizzBuzz = (n: number): void => {
+  const fizzBuzz = (n: number) => {
     [...new Array(n).keys()].map((n) => n + 1).forEach((n) => {
       let result: string = ''
       if (n % 3 === 0) result += 'Fizz'
