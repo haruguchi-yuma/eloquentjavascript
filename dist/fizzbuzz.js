@@ -11,7 +11,7 @@ const fizzbuzz = (n) => {
             console.log(n);
     });
 };
-// fizzbuzz(100)
+fizzbuzz(100);
 { //別解
     const fizzBuzz = (n) => {
         [...new Array(n).keys()].map((n) => n + 1).forEach((n) => {
