@@ -6,7 +6,7 @@ const chessBoard = (size = 8) => {
     }
 };
 { //別解
-    const chessBoard = (size) => {
+    const chessBoard = (size = 8) => {
         let str = '';
         for (let i = 1; i <= size; i++) {
             for (let j = 1; j <= size; j++) {
@@ -17,5 +17,4 @@ const chessBoard = (size = 8) => {
         }
         console.log(str);
     };
-    chessBoard(8);
 }
