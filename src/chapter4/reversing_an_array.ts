@@ -1,5 +1,5 @@
 
-const reverseArray = (arr: (number | string)[]) => {
+const reverseArray = (arr: readonly (number | string)[]) => {
   const reversedArray: (number | string)[] = [];
   arr.forEach(el => reversedArray.unshift(el))
   return reversedArray
@@ -21,6 +21,6 @@ console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
 
 { // 別解
-  const reverseArray = (arr: (number | string)[]) =>
+  const reverseArray = (arr: readonly (number | string)[]) =>
     arr.map((_, i) => arr[arr.length - 1 - i])
 }

@@ -9,7 +9,7 @@ const range = (start: number, end: number, step: number = start < end ? 1 : -1) 
   return [...new Array(size).keys()].map(n => n * step + start);
 }
 
-const sum = (nums: number[]) => nums.reduce((a, b) => a + b);
+const sum = (nums: readonly number[]) => nums.reduce((a, b) => a + b);
 
 console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

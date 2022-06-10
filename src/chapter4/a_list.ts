@@ -3,7 +3,7 @@ type List = {
   rest: null | List
 } | null
 
-const arrayToList = (arr: number[]) => {
+const arrayToList = (arr: readonly number[]) => {
   let list: List= null
 
   for(let i = arr.length - 1; i >= 0; i--) {

@@ -3,7 +3,7 @@ const minimum = (num1: number, num2: number) => {
 }
 
 { // 引数の数を可変長にした
-  const minimum = (...nums: number[]) =>
+  const minimum = (...nums: readonly number[]) =>
     nums.reduce((a, b) => a < b ? a : b )
 
   console.log(minimum(...[1, 2, 3]))
