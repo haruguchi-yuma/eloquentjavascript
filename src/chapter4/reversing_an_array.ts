@@ -1,11 +1,11 @@
 
-const reverseArray = (arr: readonly (number | string)[]) => {
-  const reversedArray: (number | string)[] = [];
+const reverseArray = <T>(arr: readonly T[]) => {
+  const reversedArray: T[] = [];
   arr.forEach(el => reversedArray.unshift(el))
   return reversedArray
 }
 
-const reverseArrayInPlace = (arr: (number | string)[]) => {
+const reverseArrayInPlace = <T>(arr: T[]) => {
   for (let i = 0; i < Math.floor(arr.length/2); i++) {
     let temp = arr[i]
     arr[i] = arr[arr.length - 1 - i]
@@ -21,6 +21,6 @@ console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
 
 { // 別解
-  const reverseArray = (arr: readonly (number | string)[]) =>
+  const reverseArray = <T>(arr: readonly T[]) =>
     arr.map((_, i) => arr[arr.length - 1 - i])
 }
